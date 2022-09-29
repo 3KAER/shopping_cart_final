@@ -1,8 +1,8 @@
 module ApplicationHelper
    
     def current_order
-        if !session[:order_id].nil?
-            Order.find(session[:order_id])
+        if !session[:user_id].nil?
+            Order.find(session[:user_id])
         else
             Order.new
         end
